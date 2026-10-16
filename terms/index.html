@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Terms of Use · Stellina</title>
+<meta name="description" content="Stellina Terms of Use.">
+<link rel="canonical" href="https://stellina.app/terms/">
+<meta name="theme-color" content="#050b1f">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="../img/app-icon.png" type="image/png">
+<style>
+  @font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/eb-garamond-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "EB Garamond"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/eb-garamond-latin-500-normal.woff2") format("woff2"); }
+  @font-face { font-family: "EB Garamond"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/eb-garamond-latin-400-italic.woff2") format("woff2"); }
+  /* Stellina design system — Night theme. A deliberate single-theme page: the brand lives at night. */
+  :root {
+    color-scheme: dark;
+    --surface-0: #050b1f;
+    --surface-100: #0b1631;
+    --surface-200: #13214a;
+    --line: rgba(174, 190, 230, 0.16);
+    --line-strong: rgba(174, 190, 230, 0.34);
+    --ink: #f1efe7;
+    --ink-muted: #aeb6cc;
+    --ink-faint: #8a94b2;
+    --accent: #3560f0;
+    --on-accent: #ffffff;
+    --accent-text: #6f93ff;
+    --star: #f4d27a;
+    --universe-nap: #f2b75c;
+    --universe-comfort: #a98cf0;
+    --success: #7fd6a8;
+    --glow-accent: 0 10px 32px rgba(53, 96, 240, 0.40);
+    --glow-star: 0 0 60px rgba(244, 210, 122, 0.35);
+    --lift: 0 24px 60px rgba(0, 0, 0, 0.45);
+    --font-display: "New York", ui-serif, "EB Garamond", Georgia, serif;
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", system-ui, "Helvetica Neue", Arial, sans-serif;
+    --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px; --space-7: 56px; --space-8: 112px;
+    --radius-sm: 10px; --radius-md: 14px; --radius-lg: 20px; --radius-xl: 28px; --radius-pill: 999px;
+  }
+  html { background: var(--surface-0); }
+  body {
+    margin: 0; background: var(--surface-0); color: var(--ink);
+    font-family: var(--font-sans); font-size: 15px; line-height: 1.6; letter-spacing: .005em;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  #sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+  .nebula { position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      radial-gradient(60% 45% at 78% 18%, rgba(40, 72, 170, 0.35), transparent 70%),
+      radial-gradient(50% 40% at 10% 70%, rgba(26, 50, 130, 0.30), transparent 70%),
+      radial-gradient(80% 50% at 50% 115%, rgba(28, 45, 99, 0.65), transparent 70%);
+  }
+  .page { position: relative; z-index: 1; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding-inline: max(20px, 4vw); }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; border-radius: 6px; }
+
+  /* type */
+  .display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.012em; text-wrap: balance; margin: 0; }
+  .eyebrow { font-size: 10.5px; line-height: 14px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--ink-faint); margin: 0; }
+  .lede { color: var(--ink-muted); font-size: 16px; line-height: 1.65; max-width: 40ch; margin: 0; }
+  h2.display { font-size: clamp(27px, 3.1vw, 40px); line-height: 1.12; }
+
+  /* buttons */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-2); min-height: 46px; padding: 0 22px;
+    border-radius: var(--radius-pill); border: 1px solid transparent; font: 500 14px/20px var(--font-sans); letter-spacing: .02em; text-decoration: none; cursor: pointer;
+    transition: transform .15s ease, background-color .2s ease; }
+  .btn:active { transform: scale(.98); }
+  .btn-primary { background: var(--accent); color: var(--on-accent); box-shadow: var(--glow-accent); }
+  .btn-primary:hover { background: #2f58e6; }
+  .btn-secondary { color: var(--ink); border-color: var(--line-strong); background: rgba(11, 22, 49, .5); }
+  .btn-secondary:hover { background: var(--surface-100); }
+  .btn-sm { min-height: 36px; padding: 0 16px; font-size: 13px; }
+  .btn svg { flex: none; }
+
+  /* nav */
+  .nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    background: rgba(5, 11, 31, 0.72); border-bottom: 1px solid var(--line); }
+  .nav .wrap { display: flex; align-items: center; gap: var(--space-5); min-height: 64px; }
+  .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--font-display); font-size: 21px; font-weight: 400; letter-spacing: .02em; }
+  .brand img { width: 30px; height: 30px; border-radius: 8px; box-shadow: 0 0 14px rgba(244, 210, 122, .35); }
+  .nav-links { display: flex; gap: var(--space-5); margin-left: auto; }
+  .nav-links a { text-decoration: none; color: var(--ink-muted); font-size: 13px; letter-spacing: .03em; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-actions { display: flex; align-items: center; gap: var(--space-3); }
+
+  /* hero */
+  .hero { padding-block: clamp(48px, 8vw, 104px) clamp(56px, 8vw, 112px); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+  .hero h1 { font-size: clamp(36px, 4.6vw, 60px); line-height: 1.06; margin-block: var(--space-4) var(--space-5); }
+  .hero h1 em { font-style: italic; color: var(--star); font-weight: 400; }
+  .hero-icon { display: block; width: 64px; height: 64px; border-radius: 15px; margin-bottom: var(--space-5); box-shadow: var(--glow-star), 0 0 0 1px var(--line-strong); }
+  .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); margin-top: var(--space-6); }
+  .hero-meta { margin-top: var(--space-4); color: var(--ink-faint); font-size: 12px; letter-spacing: .03em; }
+
+  /* phone */
+  .phone { justify-self: center; width: min(320px, 100%); aspect-ratio: 9 / 19.2; border-radius: 46px; padding: 10px;
+    background: linear-gradient(160deg, #1d2a52, #0a1430 40%, #111d40); box-shadow: var(--lift), 0 0 0 1px var(--line-strong); }
+  .screen { position: relative; height: 100%; border-radius: 37px; overflow: hidden; display: flex; flex-direction: column; align-items: center;
+    background: radial-gradient(90% 55% at 50% 30%, #13245a 0%, #07112b 60%, #040919 100%); padding: 18px 18px 22px; text-align: center; }
+  .status { width: 100%; display: flex; justify-content: space-between; font-size: 12px; font-weight: 600; color: var(--ink); padding-inline: 8px; }
+  .constellation { display: block; width: calc(100% + 36px); margin: auto -18px 0; height: auto; aspect-ratio: 1.15; object-fit: cover; object-position: 50% 50%; flex: none;
+    -webkit-mask-image: radial-gradient(closest-side, #000 62%, transparent 100%); mask-image: radial-gradient(closest-side, #000 62%, transparent 100%);
+    animation: unfold 2.2s cubic-bezier(.2, .7, .2, 1) .3s both; }
+  @keyframes unfold { from { transform: scale(.82); opacity: .15; filter: blur(3px); } to { transform: none; opacity: 1; filter: none; } }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .screen h3 { font-family: var(--font-display); font-weight: 500; font-size: 26px; line-height: 1.1; margin: 6px 0 6px; }
+  .screen p { font-size: 11.5px; line-height: 1.45; color: var(--ink-muted); margin: 0 6px; }
+  .mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; width: 100%; margin-top: 16px; margin-bottom: auto; }
+  .mini div { border: 1px solid var(--line); background: rgba(11, 22, 49, .7); border-radius: 12px; padding: 9px 4px; font-size: 9.5px; line-height: 1.3; color: var(--ink-muted); }
+  .mini b { display: block; color: var(--ink); font-size: 10.5px; margin-bottom: 2px; }
+  .mini svg { display: block; margin: 0 auto 5px; stroke: var(--star); fill: none; stroke-width: 1.5; }
+  .screen .go { margin-top: auto; width: 100%; min-height: 42px; border-radius: 12px; background: var(--accent); color: #fff; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; box-shadow: var(--glow-accent); }
+  .screen .fine { margin-top: 9px; font-size: 10px; color: var(--ink-faint); }
+
+  section { position: relative; }
+  .band { padding-block: var(--space-8); }
+
+  /* statement */
+  .statement { padding-block: clamp(56px, 7vw, 96px); border-block: 1px solid var(--line); background: rgba(5, 11, 31, .55); }
+  .statement p { font-family: var(--font-display); font-size: clamp(24px, 3vw, 38px); line-height: 1.2; margin: 0; max-width: 30ch; text-wrap: balance; }
+  .statement p span { color: var(--ink-faint); }
+
+  /* steps */
+  .head { display: flex; flex-direction: column; gap: var(--space-3); margin-bottom: var(--space-6); max-width: 640px; }
+  .head .lede { max-width: 48ch; }
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
+  .step { padding: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(11, 22, 49, .72); display: flex; flex-direction: column; gap: var(--space-3); }
+  .stars { display: flex; gap: 6px; align-items: center; height: 16px; }
+  .stars svg { fill: var(--ink-faint); opacity: .45; }
+  .stars svg.on { fill: var(--star); opacity: 1; }
+  .stars svg.now { filter: drop-shadow(0 0 6px var(--star)); }
+  .step h3 { font-family: var(--font-display); font-weight: 400; font-size: 20px; line-height: 1.15; margin: 0; }
+  .step p { margin: 0; color: var(--ink-muted); font-size: 14px; line-height: 1.45; }
+
+  /* voice */
+  .voice .wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+  .script { border: 1px solid var(--line); border-radius: var(--radius-xl); background: rgba(11, 22, 49, .78); padding: clamp(24px, 4vw, 44px); box-shadow: var(--lift); }
+  .script .eyebrow { margin-bottom: var(--space-4); }
+  .lines { font-family: var(--font-display); font-size: clamp(21px, 2.2vw, 27px); line-height: 1.35; margin: 0; }
+  .lines .w { color: rgba(241, 239, 231, .28); transition: color .35s ease, text-shadow .35s ease; }
+  .lines .w.lit { color: var(--ink); text-shadow: 0 0 18px rgba(244, 210, 122, .35); }
+  .rec { display: flex; align-items: center; gap: var(--space-3); margin-top: var(--space-5); color: var(--ink-faint); font-size: 13px; }
+  .rec i { width: 10px; height: 10px; border-radius: 50%; background: var(--star); box-shadow: 0 0 0 6px rgba(244, 210, 122, .12); animation: pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse { 50% { box-shadow: 0 0 0 10px rgba(244, 210, 122, 0); } }
+  .points { list-style: none; padding: 0; margin: var(--space-6) 0 0; display: grid; gap: var(--space-4); }
+  .points li { display: grid; grid-template-columns: 22px 1fr; gap: var(--space-3); color: var(--ink-muted); font-size: 15px; }
+  .points svg { margin-top: 4px; fill: var(--star); }
+  .points b { color: var(--ink); font-weight: 600; }
+
+  /* universes */
+  .universes { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+  .uni { position: relative; overflow: hidden; border-radius: var(--radius-xl); border: 1px solid var(--line); aspect-ratio: 5 / 7; max-width: 100%; display: flex; flex-direction: column; justify-content: flex-end; }
+  .uni .sky { position: absolute; inset: 0; }
+  .uni .sky img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
+  .uni .txt { position: relative; padding: var(--space-6) var(--space-5) var(--space-5); background: linear-gradient(to top, rgba(5, 11, 31, .94) 30%, rgba(5, 11, 31, 0)); }
+  .chip { display: inline-block; white-space: nowrap; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: 5px 10px; border-radius: var(--radius-pill); background: rgba(5, 11, 31, .6); border: 1px solid var(--line-strong); }
+  .uni--night .chip { color: var(--star); } .uni--nap .chip { color: var(--universe-nap); } .uni--comfort .chip { color: var(--universe-comfort); }
+  .uni h3 { font-family: var(--font-display); font-weight: 400; font-size: 25px; line-height: 1.1; margin: var(--space-3) 0 var(--space-2); }
+  .uni p { margin: 0; color: #cfd4e2; font-size: 14px; line-height: 1.45; }
+  .music { margin-top: var(--space-5); color: var(--ink-muted); font-size: 14px; max-width: 64ch; }
+
+  /* memory */
+  .memory .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+  .memcard { position: relative; overflow: hidden; border-radius: var(--radius-xl); border: 1px solid var(--line); background: radial-gradient(80% 90% at 85% 40%, #142a6e 0%, #0b1631 55%, #081127 100%); padding: clamp(24px, 4vw, 40px); }
+  .memcard .membg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 80% 50%; -webkit-mask-image: linear-gradient(100deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.3) 45%, #000 100%); mask-image: linear-gradient(100deg, rgba(0,0,0,.12) 0%, rgba(0,0,0,.3) 45%, #000 100%); }
+  .memcard .count { position: relative; font-family: var(--font-display); font-size: clamp(56px, 7vw, 84px); line-height: 1; font-weight: 400; color: var(--ink); font-variant-numeric: lining-nums; }
+  .memcard .count small { font-size: .32em; color: var(--ink-muted); margin-left: 8px; font-family: var(--font-sans); }
+  .memcard p.q { position: relative; font-family: var(--font-display); font-size: 21px; line-height: 1.25; margin: var(--space-3) 0 var(--space-5); max-width: 18ch; }
+  .tally { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); }
+  .tally div { border: 1px solid var(--line); border-radius: var(--radius-md); background: rgba(5, 11, 31, .5); padding: var(--space-3); font-size: 12px; color: var(--ink-muted); }
+  .tally b { display: block; font-size: 22px; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .example { position: relative; margin-top: var(--space-3); font-size: 12px; color: var(--ink-faint); }
+
+  /* pricing */
+  .pricing .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+  .plans { display: grid; gap: var(--space-3); }
+  .plan { position: relative; border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(11, 22, 49, .8); padding: var(--space-5); display: grid; gap: var(--space-1); }
+  .plan.best { border: 2px solid var(--accent); background: rgba(19, 33, 74, .85); padding: calc(var(--space-5) - 1px); }
+  .badge { justify-self: start; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: var(--radius-pill); background: var(--surface-0); color: var(--star); fill: var(--star); font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; margin-bottom: var(--space-2); }
+  .tag { position: absolute; right: var(--space-5); top: var(--space-5); padding: 5px 9px; border-radius: var(--radius-sm); border: 1px solid var(--line-strong); font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
+  .plan .nm { color: var(--ink-muted); font-size: 14px; }
+  .plan .pr { font-size: 30px; font-weight: 600; letter-spacing: -.01em; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .plan .pr small { font-size: 16px; font-weight: 500; color: var(--ink-muted); }
+  .plan .nt { color: var(--ink-muted); font-size: 14px; }
+  .trial { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); margin-top: var(--space-2); }
+  .trial div { border: 1px solid var(--line); border-radius: var(--radius-md); padding: var(--space-3); font-size: 12.5px; color: var(--ink-muted); background: rgba(5, 11, 31, .45); }
+  .trial b { display: block; color: var(--ink); font-size: 13px; margin-bottom: 2px; }
+  .fine { color: var(--ink-faint); font-size: 13px; line-height: 1.5; margin: var(--space-3) 0 0; }
+
+  /* trust */
+  .trust { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+  .trust div { padding-top: var(--space-4); border-top: 1px solid var(--line-strong); }
+  .trust h3 { margin: 0 0 var(--space-2); font-size: 15px; font-weight: 600; display: flex; align-items: center; gap: var(--space-2); }
+  .trust h3 svg { stroke: var(--success); fill: none; stroke-width: 1.8; }
+  .trust p { margin: 0; color: var(--ink-muted); font-size: 14px; }
+
+  /* final */
+  .final { text-align: center; padding-block: var(--space-8); }
+  .final .icon-big { display: block; width: 112px; height: 112px; margin: 0 auto var(--space-5); border-radius: var(--radius-xl); box-shadow: var(--glow-star), 0 0 0 1px var(--line-strong); }
+  .final h2 { margin-inline: auto; max-width: 16ch; }
+  .final .lede { margin: var(--space-4) auto var(--space-6); }
+
+
+  /* faq */
+  .faq { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+  .faq-list { border-top: 1px solid var(--line-strong); }
+  .faq details { border-bottom: 1px solid var(--line-strong); }
+  .faq summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; gap: var(--space-4); padding: var(--space-5) 0; font-family: var(--font-display); font-size: 19px; line-height: 1.3; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--font-sans); color: var(--star); font-size: 22px; line-height: 1.2; transition: transform .2s ease; }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq details p { margin: 0 0 var(--space-5); color: var(--ink-muted); font-size: 15px; max-width: 60ch; }
+  @media (max-width: 960px) { .faq { grid-template-columns: 1fr; } }
+  footer { border-top: 1px solid var(--line); padding-block: var(--space-6) calc(var(--space-6) + env(safe-area-inset-bottom, 0px)); color: var(--ink-faint); font-size: 12px; background: rgba(5, 11, 31, .8); }
+  footer .wrap { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-6); justify-content: space-between; }
+  footer nav { display: flex; gap: var(--space-5); }
+  footer a { color: var(--ink-muted); text-decoration: none; }
+  footer a:hover { color: var(--ink); }
+
+  /* entrance */
+  .rise { animation: rise .9s cubic-bezier(.2, .7, .2, 1) both; }
+  .rise.d1 { animation-delay: .12s; } .rise.d2 { animation-delay: .24s; } .rise.d3 { animation-delay: .36s; }
+  @keyframes rise { from { transform: translateY(14px); opacity: .01; } to { transform: none; opacity: 1; } }
+
+  @media (max-width: 960px) {
+    .nav-links { display: none; }
+    .hero .wrap, .voice .wrap, .memory .wrap, .pricing .wrap { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .universes { grid-template-columns: 1fr; }
+    .universes { grid-template-columns: repeat(3, minmax(220px, 1fr)); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+    .uni { scroll-snap-align: start; }
+    .band { padding-block: var(--space-7); }
+  }
+  @media (max-width: 560px) {
+    .nav .btn-sm { display: none; }
+    .steps, .trust { grid-template-columns: 1fr; }
+    .trial { grid-template-columns: 1fr; }
+    .hero-cta .btn { width: 100%; }
+    .tag { position: static; justify-self: start; margin-bottom: var(--space-2); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+  /* premium additions */
+  .display em { font-style: italic; color: var(--star); font-weight: 400; }
+  .quote { max-width: 760px; margin: 0 auto; text-align: center; }
+  .quote p { font-family: var(--font-display); font-size: clamp(22px, 2.6vw, 32px); line-height: 1.35; margin: 0; text-wrap: balance; }
+  .quote cite { display: block; margin-top: var(--space-4); font-style: normal; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-faint); }
+  .compare { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .compare-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(11, 22, 49, .6); }
+  .compare th, .compare td { text-align: left; padding: 16px 20px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  .compare tr:last-child td { border-bottom: 0; }
+  .compare thead th { font-size: 10.5px; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-faint); }
+  .compare thead th.us { color: var(--star); }
+  .compare td:first-child { color: var(--ink-faint); width: 22%; }
+  .compare td.them { color: var(--ink-muted); }
+  .compare td.us { color: var(--ink); }
+  .science { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+  .science .facts { display: grid; gap: var(--space-5); }
+  .science .facts div { padding-top: var(--space-4); border-top: 1px solid var(--line-strong); }
+  .science .facts b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 20px; margin-bottom: 6px; }
+  .science .facts p { margin: 0; color: var(--ink-muted); font-size: 14px; }
+  .science .facts a { color: var(--accent-text); }
+  .guide-link { display: inline-flex; gap: 8px; align-items: center; margin-top: var(--space-5); color: var(--accent-text); font-size: 14px; text-decoration: none; border-bottom: 1px solid rgba(111,147,255,.35); padding-bottom: 2px; }
+  @media (max-width: 960px) { .science { grid-template-columns: 1fr; } }
+</style>
+<style>
+  .doc { max-width: 720px; margin: 0 auto; padding-block: clamp(40px, 7vw, 88px) var(--space-8); }
+  .doc h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(34px, 4.4vw, 52px); line-height: 1.08; margin: var(--space-3) 0 var(--space-2); text-wrap: balance; }
+  .doc .updated { color: var(--ink-faint); font-size: 13px; letter-spacing: .03em; margin: 0 0 var(--space-6); }
+  .doc h2 { font-family: var(--font-display); font-weight: 400; font-size: 24px; line-height: 1.2; margin: var(--space-7) 0 var(--space-3); }
+  .doc h3 { font-size: 15px; font-weight: 600; margin: var(--space-5) 0 var(--space-2); }
+  .doc p, .doc li { color: var(--ink-muted); font-size: 15.5px; line-height: 1.7; }
+  .doc strong { color: var(--ink); font-weight: 600; }
+  .doc a { color: var(--accent-text); }
+  .doc ul { padding-left: 1.2em; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(11, 22, 49, .6); margin: var(--space-4) 0; }
+  .doc table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  .doc th, .doc td { text-align: left; vertical-align: top; padding: 12px 16px; border-bottom: 1px solid var(--line); color: var(--ink-muted); }
+  .doc th { font-size: 10.5px; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); }
+  .doc tr:last-child td { border-bottom: 0; }
+</style>
+<style>
+  .burger { display: none; width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--line-strong); background: rgba(11, 22, 49, .5); color: var(--ink); align-items: center; justify-content: center; cursor: pointer; padding: 0; }
+  .nav-links a[aria-current] { color: var(--ink); }
+  .social { display: flex; gap: var(--space-3); margin-top: var(--space-3); }
+  .social a { display: inline-flex; width: 36px; height: 36px; align-items: center; justify-content: center; border: 1px solid var(--line-strong); border-radius: 50%; color: var(--ink-muted); }
+  .social a:hover { color: var(--ink); border-color: var(--ink-faint); }
+  @media (max-width: 960px) {
+    .burger { display: inline-flex; }
+    .nav-actions { margin-left: auto; }
+    .nav .nav-links { display: none; }
+    .nav.open .nav-links { display: flex; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; margin: 0; padding: 4px max(20px, 4vw) 16px; background: rgba(5, 11, 31, .97); border-bottom: 1px solid var(--line); }
+    .nav.open .nav-links a { padding: 14px 0; font-size: 16px; color: var(--ink); border-bottom: 1px solid var(--line); }
+    .nav.open .nav-links a:last-child { border-bottom: 0; }
+  }
+  .trust { grid-template-columns: repeat(4, 1fr); }
+  .trust .tcard { padding: var(--space-5); border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(11, 22, 49, .72); }
+  .trust .ticon { display: inline-flex; width: 40px; height: 40px; border-radius: 12px; align-items: center; justify-content: center; background: rgba(127, 214, 168, .08); border: 1px solid rgba(127, 214, 168, .25); margin-bottom: var(--space-4); }
+  .trust .ticon svg { stroke: var(--success); fill: none; stroke-width: 1.8; }
+  .trust h3 { font-family: var(--font-display); font-weight: 400; font-size: 20px; }
+  @media (max-width: 960px) { .trust { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .trust { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="nebula" aria-hidden="true"></div>
+<div class="page">
+  <header class="nav"><div class="wrap">
+    <a class="brand" href="../" aria-label="Stellina home"><img src="../img/app-icon.webp" width="30" height="30" alt=""><span>Stellina</span></a>
+    <nav class="nav-links" aria-label="Main"><a href="../#universes">Universes</a><a href="../#pricing">Pricing</a><a href="../#faq">FAQ</a><a href="../about/">Our story</a><a href="../support/">Support</a></nav>
+    <div class="nav-actions"><a class="btn btn-primary btn-sm appstore" href="../#download">Coming soon</a><button class="burger" type="button" aria-label="Menu" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div>
+  </div></header>
+  <main class="wrap"><article class="doc">
+<p class="eyebrow">Stellina AS</p>
+<h1>Terms of Use</h1>
+<p class="updated">Last updated 15 October 2026</p>
+<h2 id="1-who-we-are">1. Who we are</h2>
+<p>Stellina is provided by Stellina AS, a Norwegian company with organisation number 938 111 529, Lindemans gate 3C, 0267 Oslo, Norway ("Stellina", "we", "us"). You can reach us at <a href="mailto:hello@stellina.app">hello@stellina.app</a>. These terms apply when you download or use the Stellina app (the "App").</p>
+<h2 id="2-who-can-use-stellina">2. Who can use Stellina</h2>
+<p>Stellina is made for parents and other adults who care for a child. You must be at least 18 years old to create an account. Stellina is not made for children to use on their own, and children cannot have an account.</p>
+<h2 id="3-what-stellina-is-and-what-it-is-not">3. What Stellina is, and what it is not</h2>
+<p>Stellina creates personal sleep and comfort audio for your child. The audio is organised in three collections, which we call universes: Bedtime, Nap and Comfort. You record a short sample of your voice. We use it to create a temporary digital voice model with our voice technology provider, and the App then reads Stellina's stories in that voice, with your child's first name, over Stellina's own music.</p>
+<p>The voice your child hears is generated by artificial intelligence, based on your recording. It is not a recording of you reading the story.</p>
+<p>Stellina is a comfort and routine tool. It is not a medical device and does not diagnose, treat or prevent any condition. It does not replace advice from a doctor, health visitor or other qualified professional, and it does not monitor your child. Please also read our Disclaimer.</p>
+<h2 id="4-safe-use">4. Safe use</h2>
+<p>Always follow safe-sleep guidance for your child's age. Do not place a phone, tablet or speaker inside a cot, crib or bed, and keep devices and cables out of reach. Play audio at a low, comfortable volume and at a safe distance from your child. Stellina is not a baby monitor and must not be relied on to supervise a child.</p>
+<h2 id="5-your-account">5. Your account</h2>
+<p>You sign in with Sign in with Apple or with a one-time code sent to your email. Keep access to your device and email secure. You are responsible for what happens in your account, and you must give us correct information.</p>
+<h2 id="6-your-voice">6. Your voice</h2>
+<p>You may only record your own voice. You must never record or upload someone else's voice, imitate another person, or use Stellina to create audio of anyone who has not agreed to it.</p>
+<p>Before you record, the App asks for your explicit consent to process your voice as described in our Privacy Policy. You can withdraw that consent at any time in Privacy &amp; Security. We then delete your recording and any voice model, and the App can no longer create new audio in your voice.</p>
+<p>You keep all rights to your voice and your recording. You give us a limited, non-transferable permission to use them only to provide Stellina to you and your household, for as long as your consent applies. We never use your voice for advertising, never sell it, and never let anyone use it to train AI models.</p>
+<h2 id="7-your-family-household">7. Your family (household)</h2>
+<p>You can invite another parent, a relative or a caregiver to your household. People you invite must accept these terms and create their own account. They will see your child's first name, birth month, photo (if added) and listening history, and they can play your child's audio.</p>
+<p>An invited parent or caregiver can record their own voice, after giving their own consent. Only invite people you trust with your child's information. You can remove a member at any time, and members can leave at any time. When someone leaves or is removed, their recording, any voice model and the audio made with it are deleted.</p>
+<h2 id="8-stellina-premium">8. Stellina Premium</h2>
+<p>New users can listen to a short personal preview for free. The full universes and some features require Stellina Premium, a subscription sold and billed by Apple through your Apple ID. Premium includes all universes, offline listening, reminders and a second parent's voice for your household.</p>
+<p>New subscribers get a 7-day free trial, once per Apple ID. If you do not cancel at least 24 hours before the trial ends, the subscription starts and you are charged.</p>
+<p>Premium is available yearly or monthly. The price is shown in the App and on the App Store before you buy, in your local currency and including any applicable taxes.</p>
+<p>The subscription renews automatically for the same period unless you turn off auto-renewal at least 24 hours before the end of the current period. You manage and cancel it in your Apple ID settings. Deleting the App or your Stellina account does not cancel it.</p>
+<p>Premium bought by one member is shared with the members of that household while it is active.</p>
+<p>Payments, refunds and the right of withdrawal are handled by Apple under Apple's terms. If you want a refund, contact Apple at reportaproblem.apple.com.</p>
+<p>If we change the price, Apple will tell you in advance and, where the law requires it, ask for your consent before the new price applies.</p>
+<h2 id="9-stellinas-content">9. Stellina's content</h2>
+<p>The App, its stories, music, illustrations, design and the name Stellina belong to Stellina AS or our licensors. The audio the App creates for your child is for private, non-commercial listening within your household. You may not copy, extract, publish, sell or share the music, the stories or the generated audio outside the App, or use them to train AI models.</p>
+<h2 id="10-acceptable-use">10. Acceptable use</h2>
+<p>You must not misuse Stellina. This includes trying to access other people's data, getting around payment or technical limits, reverse engineering the App except where the law allows it, or using Stellina in a way that breaks the law or harms others.</p>
+<h2 id="11-availability-and-changes">11. Availability and changes</h2>
+<p>We work to keep Stellina available and secure, but we cannot promise that it will always work without interruption. Audio you have already created is saved on your device and plays offline. We may improve or change the App. If a change materially reduces what you have paid for, we will tell you in advance, and you can cancel.</p>
+<h2 id="12-liability">12. Liability</h2>
+<p>Nothing in these terms limits rights you have as a consumer under mandatory law. Within those limits, we are not responsible for indirect loss, and our total liability to you is limited to what you have paid for Stellina in the 12 months before the claim. These limits do not apply to loss caused by our intent or gross negligence, or to personal injury. We are not responsible for loss that comes from using Stellina against these terms or against safe-sleep guidance.</p>
+<h2 id="13-ending-your-use">13. Ending your use</h2>
+<p>You can stop using Stellina and delete your account in the App at any time, under Privacy &amp; Security. Your data is then deleted as described in our Privacy Policy. Remember to cancel your subscription with Apple. We may suspend or close an account that seriously or repeatedly breaks these terms. We will tell you why, unless the law prevents it.</p>
+<h2 id="14-changes-to-these-terms">14. Changes to these terms</h2>
+<p>We may update these terms. If a change matters to you, we will tell you in the App at least 30 days before it applies. If you do not agree, you can delete your account before the change takes effect.</p>
+<h2 id="15-law-and-disputes">15. Law and disputes</h2>
+<p>Norwegian law applies. If you live in another country, you also keep the protection of the mandatory consumer laws there. Please contact us first at <a href="mailto:hello@stellina.app">hello@stellina.app</a> so we can try to solve the issue. Consumers in Norway can also contact the Norwegian Consumer Authority (Forbrukertilsynet) and bring the case before the Consumer Disputes Commission (Forbrukerklageutvalget). Disputes that are not solved can be taken to Oslo District Court, or to the courts where you live if you are a consumer.</p>
+<h2 id="16-apple">16. Apple</h2>
+<p>These terms are between you and Stellina AS, not Apple. Apple's Standard Licensed Application End User License Agreement also applies to your use of the App. Apple has no obligation to provide support for the App.</p>
+
+  </article></main>
+  <footer><div class="wrap">
+    <div>© 2026 Stellina AS · Lindemans gate 3C, 0267 Oslo, Norway · Org. no. 938 111 529 · hello@stellina.app<br><span style="opacity:.8">Stellina supports a calm bedtime routine. It is not a medical device.</span><div class="social"><a href="https://www.instagram.com/stellina.app" rel="noopener" aria-label="Stellina on Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg></a><a href="https://www.linkedin.com/company/stellina-app/" rel="noopener" aria-label="Stellina on LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.9 8.6H3.6V20h3.3V8.6ZM5.2 3.5a1.9 1.9 0 1 0 0 3.8 1.9 1.9 0 0 0 0-3.8ZM20.4 13.4c0-3.1-1.7-4.9-4.3-4.9-1.4 0-2.4.7-2.9 1.5V8.6H10V20h3.3v-5.9c0-1.5.6-2.6 2-2.6s1.9 1.1 1.9 2.6V20h3.3v-6.6Z"/></svg></a><a href="https://www.facebook.com/stellinaapp" rel="noopener" aria-label="Stellina on Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></svg></a></div></div>
+    <nav aria-label="Legal"><a href="../about/">Our story</a><a href="../terms/">Terms</a><a href="../privacy/">Privacy</a><a href="../disclaimer/">Disclaimer</a><a href="../support/">Support</a><a href="../support/#contact">Contact</a></nav>
+  </div></footer>
+</div>
+<script>document.querySelectorAll('.burger').forEach(function (b) { var n = b.closest('.nav'); b.addEventListener('click', function () { b.setAttribute('aria-expanded', n.classList.toggle('open')); }); n.querySelectorAll('.nav-links a').forEach(function (a) { a.addEventListener('click', function () { n.classList.remove('open'); b.setAttribute('aria-expanded', 'false'); }); }); });</script>
+</body>
+</html>
