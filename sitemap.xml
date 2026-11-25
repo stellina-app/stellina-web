@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://stellina.app/</loc></url>
-  <url><loc>https://stellina.app/about/</loc></url>
-  <url><loc>https://stellina.app/terms/</loc></url>
-  <url><loc>https://stellina.app/privacy/</loc></url>
-  <url><loc>https://stellina.app/disclaimer/</loc></url>
-  <url><loc>https://stellina.app/support/</loc></url>
-  <url><loc>https://stellina.app/widget/</loc></url>
-  <url><loc>https://stellina.app/no/vilkar/</loc></url>
-  <url><loc>https://stellina.app/no/personvern/</loc></url>
-  <url><loc>https://stellina.app/no/ansvarsfraskrivelse/</loc></url>
-  <url><loc>https://stellina.app/no/widget/</loc></url>
+  <url><loc>https://stellina.app/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/about/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/terms/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/privacy/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/disclaimer/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/support/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/widget/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/no/vilkar/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/no/personvern/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/no/ansvarsfraskrivelse/</loc><lastmod>2026-11-25</lastmod></url>
+  <url><loc>https://stellina.app/no/widget/</loc><lastmod>2026-11-25</lastmod></url>
 </urlset>
