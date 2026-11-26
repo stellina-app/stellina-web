@@ -362,25 +362,25 @@ document.addEventListener('DOMContentLoaded', function () {
   .beta h1 em { color: var(--star); font-style: italic; }
   .beta h2 { font-family: var(--font-display); font-weight: 400; font-size: 28px; margin: var(--space-7) 0 var(--space-4); }
   .beta .lede { color: var(--ink-muted); font-size: 17px; line-height: 1.65; max-width: 58ch; margin: 0; }
-  .facts { display: flex; flex-wrap: wrap; gap: 10px; margin: var(--space-5) 0 0; padding: 0; list-style: none; }
-  .facts li { display: flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); font-size: 14px; background: rgba(11, 22, 49, .6); }
-  .facts svg { color: var(--star); width: 18px; height: 18px; }
-  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-  .step { display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: start; padding: 18px 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(11, 22, 49, .55); }
-  .step .ico { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: rgba(53, 96, 240, .16); color: var(--accent-text); }
-  .step .ico.gold { background: rgba(244, 210, 122, .12); color: var(--star); }
-  .step h3 { margin: 2px 0 4px; font-size: 16px; font-weight: 600; color: var(--ink); }
-  .step p, .step li { margin: 0; color: var(--ink-muted); font-size: 15px; line-height: 1.6; }
-  .step ul { margin: 8px 0 0; padding-left: 1.1em; }
-  .step .n { color: var(--ink-faint); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
-  .step .btn { margin-top: 12px; }
-  .note { margin-top: var(--space-5); padding: 18px 20px; border-radius: 18px; border: 1px solid var(--line); display: grid; grid-template-columns: 28px 1fr; gap: 14px; color: var(--ink-muted); font-size: 15px; line-height: 1.6; }
-  .note svg { color: var(--star); }
-  .note b { color: var(--ink); }
-  .thanks { margin-top: var(--space-7); text-align: center; color: var(--ink-muted); font-size: 16px; line-height: 1.7; }
+  .bt-facts { display: flex; flex-wrap: wrap; gap: 10px; margin: var(--space-5) 0 0; padding: 0; list-style: none; }
+  .bt-facts li { display: flex; align-items: center; gap: 8px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); font-size: 14px; background: rgba(11, 22, 49, .6); }
+  .bt-facts svg { color: var(--star); width: 18px; height: 18px; }
+  .bt-steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .bt-step { display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: start; padding: 18px 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(11, 22, 49, .55); }
+  .bt-step .bt-ico { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: rgba(53, 96, 240, .16); color: var(--accent-text); }
+  .bt-step .bt-ico.gold { background: rgba(244, 210, 122, .12); color: var(--star); }
+  .bt-step h3 { margin: 2px 0 4px; font-size: 16px; font-weight: 600; color: var(--ink); }
+  .bt-step p, .bt-step li { margin: 0; color: var(--ink-muted); font-size: 15px; line-height: 1.6; }
+  .bt-step ul { margin: 8px 0 0; padding-left: 1.1em; }
+  .bt-step .bt-n { color: var(--ink-faint); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+  .bt-step .btn { margin-top: 12px; white-space: nowrap; border-radius: 999px; }
+  .bt-note { margin-top: var(--space-5); padding: 18px 20px; border-radius: 18px; border: 1px solid var(--line); display: grid; grid-template-columns: 28px 1fr; gap: 14px; color: var(--ink-muted); font-size: 15px; line-height: 1.6; }
+  .bt-note svg { color: var(--star); }
+  .bt-note b { color: var(--ink); }
+  .bt-thanks { margin-top: var(--space-7); text-align: center; color: var(--ink-muted); font-size: 16px; line-height: 1.7; }
   .beta .btn-primary, .beta .btn-primary:visited { color: #ffffff; }
-  .beta ul.facts { padding-left: 0; margin-left: 0; }
-  .thanks .sig { font-style: italic; color: var(--ink-faint); font-size: 14px; }
+  .beta ul.bt-facts { padding-left: 0; margin-left: 0; }
+  .bt-thanks .sig { font-style: italic; color: var(--ink-faint); font-size: 14px; }
 </style>
 </head>
 <body>
@@ -396,31 +396,31 @@ document.addEventListener('DOMContentLoaded', function () {
 <p class="eyebrow">Beta test</p>
 <h1>Help us test <em>Stellina.</em></h1>
 <p class="lede">Stellina is a sleep app for children. You record your voice once, and Stellina uses it to say calm, reassuring words over gentle sleep music, so your child feels safe and settles more easily. Before it reaches the App Store, we would love your honest eyes on it.</p>
-<ul class="facts">
+<ul class="bt-facts">
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>About 2 minutes to start</li>
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M12 9v11M4 13h16"/><path d="M12 9c-1.5-3-5-3-5-1s3 1 5 1c2 0 5 1 5-1s-3.5-2-5 1Z"/></svg>Everything is free, Premium included</li>
 <li><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Open until Sunday 29 November</li>
 </ul>
 
 <h2>Get started</h2>
-<ol class="steps">
-<li class="step"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg></span><div><span class="n">Step 1</span><h3>Download TestFlight</h3><p>TestFlight is Apple’s own app for testing new apps before they launch.</p><a class="btn btn-primary btn-sm" href="https://apps.apple.com/app/id899247664" target="_blank" rel="noopener">Get TestFlight</a></div></li>
-<li class="step"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><div><span class="n">Step 2</span><h3>Open the invitation on your iPhone</h3><p>Tap the button below on the iPhone you want to test on.</p><a class="btn btn-primary btn-sm" href="https://testflight.apple.com/join/Rv98fpRu" target="_blank" rel="noopener">Join the Stellina beta</a></div></li>
-<li class="step"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><div><span class="n">Step 3</span><h3>Install and open Stellina</h3><p>Follow the steps in the app. Recording your voice takes about a minute.</p></div></li>
-<li class="step"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><path d="M16.5 14v5M14 16.5h5"/></svg></span><div><span class="n">Step 4</span><h3>Add the Stellina widget</h3><p>Start Stellina with one tap, straight from your phone.</p><ul><li><b>Lock Screen:</b> touch and hold the Lock Screen, tap Customise, choose the Lock Screen, tap Add Widgets and choose Stellina.</li><li><b>Home Screen:</b> touch and hold an empty area, tap Edit, then Add Widget, search for Stellina and choose a widget.</li></ul></div></li>
+<ol class="bt-steps">
+<li class="bt-step"><span class="bt-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg></span><div><span class="bt-n">Step 1</span><h3>Download TestFlight</h3><p>TestFlight is Apple’s own app for testing new apps before they launch.</p><a class="btn btn-primary btn-sm" href="https://apps.apple.com/app/id899247664" target="_blank" rel="noopener">Get TestFlight</a></div></li>
+<li class="bt-step"><span class="bt-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg></span><div><span class="bt-n">Step 2</span><h3>Open the invitation on your iPhone</h3><p>Tap the button below on the iPhone you want to test on.</p><a class="btn btn-primary btn-sm" href="https://testflight.apple.com/join/Rv98fpRu" target="_blank" rel="noopener">Join the Stellina beta</a></div></li>
+<li class="bt-step"><span class="bt-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><div><span class="bt-n">Step 3</span><h3>Install and open Stellina</h3><p>Follow the steps in the app. Recording your voice takes about a minute.</p></div></li>
+<li class="bt-step"><span class="bt-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><path d="M16.5 14v5M14 16.5h5"/></svg></span><div><span class="bt-n">Step 4</span><h3>Add the Stellina widget</h3><p>Start Stellina with one tap, straight from your phone.</p><ul><li><b>Lock Screen:</b> touch and hold the Lock Screen, tap Customise, choose the Lock Screen, tap Add Widgets and choose Stellina.</li><li><b>Home Screen:</b> touch and hold an empty area, tap Edit, then Add Widget, search for Stellina and choose a widget.</li></ul></div></li>
 </ol>
 
 <h2>Three small things we hope you’ll do</h2>
-<ol class="steps">
-<li class="step"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10l4 4v12H5z"/><path d="M14 4v5h5"/><path d="M8 13h8M8 16.5h5"/></svg></span><div><span class="n">1</span><h3>Write down your first impression</h3><p>Right after you open the app for the first time. What did you think and feel? A short note or message is perfect.</p></div></li>
-<li class="step"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg></span><div><span class="n">2</span><h3>Use it for a few days</h3><p>Use <b>Bedtime</b> in the evening for a few nights, and try <b>Nap</b> during the day and <b>Comfort</b> when your child wakes or needs you close.</p></div></li>
-<li class="step"><span class="ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h6"/><rect x="5" y="4" width="14" height="17" rx="2"/><path d="m8.5 12 2 2 4-4"/><path d="M8.5 17.5h7"/></svg></span><div><span class="n">3</span><h3>Fill in the short form</h3><p>When you have used Stellina a little. It takes about five minutes.</p><a class="btn btn-primary btn-sm" href="https://forms.gle/GzpT92FQ7hNf4Bsv8" target="_blank" rel="noopener">Open the form</a></div></li>
+<ol class="bt-steps">
+<li class="bt-step"><span class="bt-ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h10l4 4v12H5z"/><path d="M14 4v5h5"/><path d="M8 13h8M8 16.5h5"/></svg></span><div><span class="bt-n">1</span><h3>Write down your first impression</h3><p>Right after you open the app for the first time. What did you think and feel? A short note or message is perfect.</p></div></li>
+<li class="bt-step"><span class="bt-ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg></span><div><span class="bt-n">2</span><h3>Use it for a few days</h3><p>Use <b>Bedtime</b> in the evening for a few nights, and try <b>Nap</b> during the day and <b>Comfort</b> when your child wakes or needs you close.</p></div></li>
+<li class="bt-step"><span class="bt-ico gold"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5h6"/><rect x="5" y="4" width="14" height="17" rx="2"/><path d="m8.5 12 2 2 4-4"/><path d="M8.5 17.5h7"/></svg></span><div><span class="bt-n">3</span><h3>Fill in the short form</h3><p>When you have used Stellina a little. It takes about five minutes.</p><a class="btn btn-primary btn-sm" href="https://forms.gle/GzpT92FQ7hNf4Bsv8" target="_blank" rel="noopener">Open the form</a></div></li>
 </ol>
 
-<div class="note"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><div><b>Spotted something odd?</b> Take a screenshot in the app and tap <b>Share Beta Feedback</b>. It comes straight to us.</div></div>
-<div class="note"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><div><b>About your voice.</b> Your recording is used only to create the audio for your child, and Stellina does not keep it. You can delete your voice and everything in your account at any time in the app.</div></div>
+<div class="bt-note"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l1.5-2.5h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><div><b>Spotted something odd?</b> Take a screenshot in the app and tap <b>Share Beta Feedback</b>. It comes straight to us.</div></div>
+<div class="bt-note"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg><div><b>About your voice.</b> Your recording is used only to create the audio for your child, and Stellina does not keep it. You can delete your voice and everything in your account at any time in the app.</div></div>
 
-<div class="thanks"><p>If you don’t have time for everything, that is completely fine. A little is much better than nothing, and honest criticism helps us more than praise.</p><p>Thank you for helping.</p><p class="sig">Kristina, founder of Stellina</p></div>
+<div class="bt-thanks"><p>If you don’t have time for everything, that is completely fine. A little is much better than nothing, and honest criticism helps us more than praise.</p><p>Thank you for helping.</p><p class="sig">Kristina, founder of Stellina</p></div>
 </div></main>
   </article></main>
   <footer><div class="wrap">
